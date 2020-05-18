@@ -43,4 +43,8 @@ class User extends Authenticatable
         //return DB::table('users')->find($id);
         return DB::select('select id, name, email from users where id = :id', ['id' => $id]);
     }
+
+    public static function healthcheck() {
+        return DB::select('select 1');
+    }
 }

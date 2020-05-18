@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/users',      'UserController@index');
 Route::get('/users/{id}', 'UserController@show');
+Route::get('/health', 'UserController@health');

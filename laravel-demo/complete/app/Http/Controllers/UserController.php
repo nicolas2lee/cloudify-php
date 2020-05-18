@@ -7,6 +7,11 @@ use Illuminate\Routing\Controller;
 
 class UserController extends Controller {
     //use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function health() {
+        //return "hello";
+        return User::healthcheck();
+    }
+
     public function index() {
         //return "hello";
         return User::all();
